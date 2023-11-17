@@ -30,11 +30,12 @@
   <header>
     <nav>
       <% if user_signed_in? %>
-        <%= link_to 'Edit Profile', edit_user_registration_path %>
-        <a href="http://localhost:3000/" onclick="sendDeleteRequest('<%= destroy_user_session_path %>'); return false;">Sign Out</a>
+        <%= link_to 'Change your profile', edit_user_registration_path %>
+        <a href="http://localhost:3000/" onclick="sendDeleteRequest('<%= destroy_user_session_path %>'); return false;">log out of your account</a>
       <% else %>
-        <%= link_to 'Sign In', new_user_session_path %>
-        <%= link_to 'Sign Up', new_user_registration_path %>
+        <%= link_to 'Login your in your account', new_user_session_path %>
+        <%= link_to '
+        Register a new account', new_user_registration_path %>
       <% end %>
     </nav>
   </header>
